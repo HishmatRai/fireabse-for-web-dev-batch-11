@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-database.js"></script>
+    <script src="./../js/firebase-config.js"></script>
+  </head>
+  <body>
+    <h1>Profile Page</h1>
+    <input type="file" onchange="uploadFile(event)" />
+    <form onsubmit="updateProfileHandler(); return false">
+      <input type="text" placeholder="Full Name" id="full-name" required />
+      <input type="number" placeholder="Phone Number" id="phone" required />
+      <input type="text" placeholder="Username" required id="username" />
+      <input
+        type="email"
+        placeholder="Email Address"
+        readonly
+        disabled
+        id="email"
+        required
+      />
+      <p id="message"></p>
+      <input type="submit" value="Update Profile" />
+    </form>
+  </body>
+  <script src="./../js/profile.js"></script>
+</html>

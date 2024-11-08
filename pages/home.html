@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-database.js"></script>
+    <script src="./../js/firebase-config.js"></script>
+    <style>
+      #loading {
+        display: block;
+      }
+      #ul {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Home Page</h1>
+    <a href="profile.html">Profile</a>
+    <a href="todos.html">Todos</a>
+    <a href="firestore-database.html">Firestore database</a>
+    <p id="message"></p>
+    <button onclick="logOutHandler()">Log Out</button>
+    <button onclick="activeUserHandler()">Active User</button>
+
+    <br />
+    <br />
+    <button onclick="addDataHandler()">Add data</button>
+    <button onclick="getDataHandler()">Get Data</button>
+    <img
+      src="https://cdn.pixabay.com/animation/2023/10/08/03/19/03-19-26-213_512.gif"
+      id="loading"
+      height="50"
+    />
+    <ul id="ul"></ul>
+
+    <button onclick="updateDataHandler()">Update Data</button>
+    <button onclick="deleteDataHandler()">Delete Data</button>
+  </body>
+  <script src="./../js/home.js"></script>
+</html>
